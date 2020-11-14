@@ -1,0 +1,122 @@
+% -------------------------
+% esquema de los capitulos
+% -------------------------
+% - Indice
+% - Lista de figuras
+% - Lista de tablas
+% - Resumen
+% - Introduccion
+% - Marco teorico
+% - Resultados
+% - Conclusiones
+% - Referencias
+
+\documentclass[a4paper,openany,12pt]{report}
+\input{auxiliar/packages}
+\setcounter{secnumdepth}{4}
+
+\begin{document}
+    
+    % ------------------------------------------
+    % Insertando caratula
+    % ------------------------------------------
+    
+    \includepdf{contenido/caratula/caratula}
+	
+	% ------------------------------------------
+	% Cambiando nombres predefinidos al español
+	% ------------------------------------------
+	
+	\renewcommand{\listfigurename}{Lista de Figuras}
+	\renewcommand{\listtablename}{Lista de Tablas}
+	
+	% ---------------------------------
+	% Espaciado y numeracion en romano
+	% ---------------------------------
+	
+	\newpage
+	\spacing{1.5}
+	\pagenumbering{roman}
+	
+	% --------------------
+	% Tabla de contenidos
+	% --------------------
+	
+	\tableofcontents
+	
+	% -----------------
+	% Lista de figuras
+	% -----------------
+	
+	\cleardoublepage
+	\addcontentsline{toc}{chapter}{Lista de figuras}
+	\listoffigures
+	
+	% ----------------
+	% Lista de tablas
+	% ----------------
+	
+	\cleardoublepage
+	\addcontentsline{toc}{chapter}{Lista de tablas}
+	\listoftables
+	
+	% --------
+	% Resumen
+	% --------
+	
+	\chapter*{Resumen}
+	\addcontentsline{toc}{chapter}{Resumen}
+	\input{contenido/resumen/resumen}
+	
+	% -------------
+	% Introduccion
+	% -------------
+	
+	\chapter*{Introducci\'on}
+    \addcontentsline{toc}{chapter}{Introducci\'on}
+	\pagenumbering{arabic} % <<<<<<<< numeracion en arabico
+	\input{contenido/introduccion/introduccion}
+	
+	% -------------------
+	% Marco teorico
+	% -------------------
+	
+	\chapter{Marco te\'orico}
+	\input{contenido/marco_teorico/marco_teorico}
+    
+    % --------------------
+    % calculos computacionales
+    % --------------------
+    
+    \chapter{M\'etodos computacionales}
+    \input{contenido/calculos_computacionales/calculos_computacionales}
+	
+	% -----------------------
+	% Resultados
+	% -----------------------
+	
+	\chapter{Resultados}
+	\input{contenido/resultados/resultados}
+    
+    % -----------------------
+    % Conclusiones
+    % -----------------------
+    
+    \chapter*{Conclusiones}
+    \addcontentsline{toc}{chapter}{Conclusiones}
+    \input{contenido/conclusiones/conclusiones}
+    
+     % -----------------------
+     % Apendice
+     % -----------------------
+     
+     \appendix
+     \input{contenido/apendice/apendice}
+	
+	% ------------
+	% Referencias
+	% ------------
+	
+	\input{contenido/referencias/referencias}
+	
+\end{document}

@@ -1,0 +1,87 @@
+El siguiente diagrama muestra el proceso que se sigue en un c\'alculo autoconsistente convencional con Quantum ESPRESSO.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{contenido/calculos_computacionales/suite_qe/img_suite_qe/BucleAutoconsistente.png}
+	\caption[Diagrama del proceso de c\'alculo de campo 
+	autoconsistente]{Diagrama del proceso de c\'alculo de campo 
+		autoconsistente.}
+\end{figure}
+
+Quantum ESPRESSO se encuentra formado por varios programas que cumplen una 
+gran variedad de funciones. En el presente trabajo se utilizaron 
+los siguientes programas espec\'ificos:
+
+\begin{itemize}
+    \item pw.x : Realiza el c\'alculo de autoconsistencia y el c\'alculo de 
+    bandas de energ\'ia.
+    \item bands.x : Extrae la informaci\'on correspondiente a cada una 
+    de las bandas de energ\'ia, desde los archivos de salida producidos por pw.x
+    \item projwfc.x : Realiza el c\'alculo de densidad de estados total y 
+    parcial.
+    \item plotband.x : Grafica las bandas de energ\'ia a partir de lo obtenido 
+    con bands.x
+    \item pp.x : Extrae los datos correspondientes a la densidad de carga, a 
+    partir de lo obtenido con pw.x
+    \item plotrho.x : Grafica la densidad de carga a partir de lo obtenido con 
+    pp.x
+\end{itemize}
+
+\noindent Adem\'as de la suite Quantum ESPRESSO se utilizaron otros programas 
+que se especifican a continuaci\'on.
+
+\begin{itemize}
+    \item VESTA : Generaci\'on y visualizaci\'on de la estructura at\'omica 
+    utilizada en la simulaci\'on
+    \item XCrySDen : Generaci\'on del camino de puntos K para el c\'alculo de 
+    la estructura de bandas de energ\'ia. Adem\'as permite revisar que la 
+    estructura del archivo de control de Quantum ESPRESSO sea el adecuado.
+    \item Veusz : Programa para generar gr\'aficas
+    \item Scripts : Scripts desarrollados espec\'ificamente para el 
+    presente trabajo en python y shell para automatizar procesos.
+\end{itemize}
+
+\noindent El proceso de simulaci\'on con la suite Quantum ESPRESSO seguido en 
+el presente trabajo puede ser separado en tres secciones.
+
+\begin{itemize}
+    \item Preprocesamiento.
+    \item Simulaci\'on.
+    \item Postprocesamiento.
+\end{itemize}
+
+\noindent Cada una de estas secciones se conforma de una serie de pasos que 
+se listan 
+a continuaci\'on.
+
+\begin{enumerate}
+    \item \textbf{Preprocesamiento:}
+    \begin{itemize}
+        \item Optimizaci\'on de la energ\'ia de corte.
+        \item Optimizaci\'on del n\'umero de puntos K.
+        \item Generacion de las estructuras cristalinas con los diferentes 
+        arreglos antiferromagn\'eticos
+        \item C\'alculo del par\'ametro U de Hubbard.
+        \item Relajaci\'on de las estructuras cristalinas.
+    \end{itemize}
+    \item \textbf{Simulaci\'on:}
+    \begin{itemize}
+        \item C\'alculo autoconsistente con pw.x
+        \item C\'alculo de la densidad de carga con pp.x
+        \item C\'alculo no autoconsistente con pw.x
+        \item C\'alculo de la densidad de estados total y parcial con 
+        projwfc.x
+        \item C\'alculo de las bandas de energ\'ia con pw.x
+        \item Obtenci\'on de los datos de cada una de las bandas de 
+        energ\'ia con bands.x
+    \end{itemize}
+    \item \textbf{Postprocesamiento:}
+    \begin{itemize}
+        \item Procesamiento de los archivos obtenidos con projwfc.x 
+        utilizando el script de python suma\_pdos.py para luego graficar 
+        las densidades de estado.
+        \item Procesamiento de los archivos obtenidos con bands.x 
+        utilizando el script de python banda\_plot.py para luego graficar 
+        las bandas.
+    \end{itemize}
+\end{enumerate}

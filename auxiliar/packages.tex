@@ -1,0 +1,87 @@
+%\usepackage{natbib}
+%\usepackage{apalike}
+\usepackage{pdfpages}
+\usepackage{cite}
+\usepackage{tocloft}
+\usepackage{subfig}
+\renewcommand{\cftfigfont}{Figura }
+\renewcommand{\cfttabfont}{Tabla }
+\usepackage{mathptm}
+\date{\today}
+\usepackage{braket}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage[a4paper]{geometry}
+\geometry{top=3.0cm, bottom=2.5cm, left=3.0cm, right=2.5cm}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{lmodern}
+\usepackage[spanish,es-lcroman,es-tabla]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{appendix}
+\usepackage{makeidx}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+% encabezado paginas normales solo BOOK
+% [] es para pares {} es para impares
+\lhead[]{} % izquierda
+\chead[]{} % centro
+\rhead[]{} % derecha
+\renewcommand{\headrulewidth}{0pt} % grosor linea de separacion
+% pie de pagina paginas normales solo BOOK
+\lfoot[]{} % izquierda
+\cfoot[\thepage]{\thepage} % centro - pone el numero de la pagina
+\rfoot[]{} % derecha
+\renewcommand{\footrulewidth}{0pt} % grosor linea de separacion
+% encabezado y pie de pagina de los inicio de capitulo
+\pagestyle{plain}{
+	\fancyhead[L]{} % cabecera lado izquierdo
+	\fancyhead[C]{} % cabecera lado centro
+	\fancyhead[R]{} % cabecera lado derecha
+	\fancyfoot[L]{} % pie pagina lado izquierdo
+	\fancyfoot[C]{\thepage} % pie lado centro - pone numero de la pagina
+	\fancyfoot[R]{} % pie pagina lado derecho
+	\renewcommand{\headrulewidth}{0pt} % cabecera - grosor linea de separacion
+	\renewcommand{\footrulewidth}{0pt} % pie pagina - grosor linea de separacion
+}
+    % opciones del paquete setspace
+                         %\doublespacing
+                         %\onehalfspace
+                         %\singlespace
+                         %\spacing{1.5}
+                         %===========
+\setlength{\parskip}{1cm plus 5mm minus 4mm}  %distancia entre parrafos
+\usepackage{color}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\usepackage{listings}
+\lstset{ frame=Ltb,
+    framerule=0pt,
+    aboveskip=0.5cm,
+    framextopmargin=3pt,
+    framexbottommargin=3pt,
+    framexleftmargin=0.4cm,
+    framesep=0pt,
+    rulesep=.4pt,
+    backgroundcolor=\color{gray97},
+    rulesepcolor=\color{black},
+    %
+    stringstyle=\ttfamily\color{purple!40!black},
+    showstringspaces = false,
+    basicstyle=\small\ttfamily,
+    commentstyle=\itshape\color{orange},
+    keywordstyle=\bfseries\color{green!40!black},
+    %
+    numbers=left,
+    numbersep=15pt,
+    numberstyle=\small,
+    numberfirstline = false,
+    breaklines=true,
+}
+
+\newtheorem{hk}{Teorema}

@@ -1,0 +1,186 @@
+Luego que Hohenberg y Kohn enunciaran sus dos teoremas en 
+1964, se asent\'o 
+el uso de la densidad electr\'onica del estado fundamental, como una variable 
+con la cual se pod\'ia obtener informaci\'on \'util del sistema estudiado. 
+Pero, los teoremas no indicaban una forma de como usar la densidad 
+electr\'onica de una manera practica. En 1965 Kohn y Sham desarrollaron un 
+modelo de electrones independientes, que utilizaba la densidad electr\'onica 
+como variable fundamental.
+
+\noindent El hamiltoniano de un sistema de \textbf{n} electrones es:
+
+\begin{equation}
+    H = -\frac{1}{2} \sum _{i=1}^{n} \nabla _{i}^{2} - \sum 
+    _{I=1}^{N} \sum _{i=1}^{n} \frac{Z_{I}}{|r_{i} - r_{I}|} + \frac{1}{2} 
+    \sum _{i\neq j}^{n} \frac{1}{|r_{i} - r_{j}|}
+\end{equation}
+
+\noindent Seg\'un el m\'etodo de Hartree-Fock la energ\'ia de los \textbf{n} 
+electrones interactuantes es:
+
+\begin{equation}
+    E = E_{k} + E_{ext} + E_{H} + E_{x} \textrm{ ,}
+\end{equation}
+
+\noindent donde $E_{k}$ es la energ\'ia cin\'etica, $E_{ext}$ es la energ\'ia 
+del potencial externo, $E_{H}$ es la energ\'ia de Hartree y $E_{x}$ es la 
+energ\'ia de intercambio.
+
+\noindent En el enfoque Kohn-Sham, se asume que los electrones no interactuan y 
+que el sistema se 
+encuentra en su estado fundamental. De esta forma la 
+energ\'ia cin\'etica de los electrones es.
+
+\begin{equation}
+    E_{k} = E_{k}^{no} + E_{k}^{in}
+\end{equation}
+
+\noindent donde $E_{k}^{no}$ es la energ\'ia cin\'etica no interactuante y  
+$E_{k}^{in}$ es una correcci\'on a la energ\'ia cin\'etica no interactuante y 
+puede considerarse como un termino de energ\'ia de correlaci\'on entre los 
+electrones.  Adem\'as se agreg\'o un termino nuevo de energ\'ia de 
+correlaci\'on 
+que no se consider\'o en el m\'etodo de Hartree-Fock ($E_{c}^{in}$).
+
+\noindent  Ahora reuniremos todos los t\'erminos de interacci\'on en un solo 
+t\'ermino llamado energ\'ia de intercambio-correlaci\'on.
+
+\begin{equation}
+    E_{xc} = E_{x} + E_{c}^{in} + E_{k}^{in} = E_{x} + E_{c}
+\end{equation}
+
+\noindent Notamos que las energ\'ias $E_{c}^{in}$ y $E_{k}^{in}$ forman la 
+energ\'ia de correlaci\'on $E_{c}$. A partir de esto, podemos escribir la 
+energ\'ia del siguiente modo:
+
+\begin{equation}
+    E = E_{k}^{no} + E_{ext} + E_{H} + E_{xc}
+\end{equation}
+
+\noindent Es posible calcular los tres primeros terminos, pero el \'ultimo es 
+desconocido y debe ser aproximado. El hamiltoniano correspondiente es
+
+\begin{equation}\label {hamil_kohn_sham}
+    H_{KS} = E_{k}^{no} + V_{ext} + V_{H} + V_{xc} = - \frac{\hbar ^{2}}{2m} 
+    \nabla ^{2} + V_{ef}
+\end{equation}
+
+\noindent En \ref{hamil_kohn_sham} $V_{ef}$ es el potencial efectivo que 
+contiene los tres t\'erminos potenciales, que definen un sistema de electrones 
+no interactuantes, el cual es m\'as sencillo de calcular. Si se conociera con 
+precisi\'on la forma del t\'ermino de intercambio-correlaci\'on, entonces la 
+densidad electr\'onica y la energ\'ia del estado fundamental serian igual a la 
+del sistema interactuante. 
+
+\noindent Es necesario expresar los t\'erminos de la energ\'ia en funci\'on de 
+la densidad electr\'onica para poder aplicar el principio variacional respecto 
+de la densidad electr\'onica y hallar de esta forma las ecuaciones de Kohn-Sham.
+
+\noindent La energ\'ia cin\'etica debe ser expresada como una suma de los 
+orbitales de Kohn-Sham y no en funci\'on de la densidad electr\'onica debido a 
+la derivada de segundo orden, pero los orbitales se encuentran directamente 
+relacionados con la densidad electr\'onica por medio de $\rho = \sum _{i} |\phi 
+_{i}|^{2}$, entonces la energ\'ia cin\'etica queda expresada en la forma de
+\ref{cineticaKS}
+
+\begin{equation} \label{cineticaKS}
+    E_{k}^{no} = -\frac{1}{2} \sum _{i=1}^{n} \phi _{i}^{\ast}(r)\nabla_{i}^{2} 
+    \phi_{i}(r)
+\end{equation}
+
+\noindent Para el caso de la energ\'ia externa, proveniente de la interacci\'on 
+con los 
+n\'ucleos, podemos expresarla en la forma de \ref{externaKS}
+
+\begin{equation} \label{externaKS}
+    E_{ext} = \int \phi ^{\ast }(r) V_{ext}(r) \phi (r) dr = \int V_{ext}(r) 
+    \rho (r) dr
+\end{equation}
+
+\noindent En el caso de la energ\'ia de Hartree, podemos expresarla en la forma 
+de 
+\ref{hartreeKS}
+
+\begin{equation} \label{hartreeKS}
+    E_{H} = \int V_{H}(r) \rho (r) dr
+\end{equation}
+
+\noindent Finalmente en el caso de la energ\'ia de intercambio-correlaci\'on, 
+se asumir\'a que se puede expresar en funci\'on de la densidad, ya que es 
+necesario hacer aproximaciones que se revisaran con mayor detalle en secciones 
+posteriores.
+
+%             =
+%            = =
+%           =   =
+%          =     =
+%         =       = 
+% ========         ==========
+% ECUACIONES DE kOHN-SHAM
+% ========         ===========
+%         =       =
+%          =     =
+%           =   =
+%            = =
+%             =
+
+\subsection{Ecuaciones de Kohn-Sham}
+
+Para hallar las ecuaciones de Kohn-Sham se utiliza el m\'etodo de 
+multiplicadores de lagrange, para lo cual definimos la restricci\'on expresada 
+en \ref{restriccion_kohn_sham} dado que los orbitales deben ser ortonormales.
+
+
+\begin{equation} \label{restriccion_kohn_sham}
+    \int \phi _{i}^{\ast }(r) \phi _{j}(r)dr = \left \{ \begin{array}{ll}
+        1 & i=j \\
+        0 & i \neq j
+        \end{array} \right. \textrm{ ,}
+\end{equation}
+
+\noindent a partir de \ref{restriccion_kohn_sham} obtenemos
+
+\begin{equation}
+     \int \phi _{i}^{\ast }(r) \phi _{j}(r)dr - 1 = 0
+\end{equation}
+
+\noindent Aplicando el m\'etodo de multiplicadores de Lagrange obtenemos
+
+\begin{equation}
+    \frac{\delta }{\delta \phi _{i}^{\ast }(r)} \left( E[\rho (r)] - \sum _{i} 
+    \sum _{j}     \lambda _{ij} \left[ \int \phi _{i}^{\ast }(r) \phi _{j}(r) 
+    dr - 1  \right] \right) = 0 \textrm{ ,}
+\end{equation}
+
+\noindent luego usando la regla de la cadena en 
+la derivada funcional obtenemos
+
+\begin{equation}
+\frac{\delta E_{k}^{no}}{\delta \phi _{i}^{\ast }(r)} + \left[ \frac{\delta 
+    E_{ext}}{\delta \rho (r)} + \frac{\delta E_{H}}{\delta \rho (r)} + 
+\frac{\delta E_{ec}}{\delta \rho (r)} \right]\frac{\delta \rho (r)}{\delta 
+    \phi _{i}^{\ast }(r)} - \sum _{j} \lambda_{ij} \phi _{j}(r) = 0 \textrm{ ,}
+\end{equation}
+
+\noindent donde $\lambda_{ij}$ es una matriz hermitiana que puede ser 
+diagonalizada por una transformaci\'on unitaria de los orbitales.
+
+\begin{equation}
+    \left[ -\frac{1}{2} \nabla_{i}^{2} + V_{ext}  + V_{H} + V_{xc} - 
+    \varepsilon_{i} \right] \phi_{i}(r) = 0 \textrm{ ,}
+\end{equation}
+
+\noindent reuniendo los t\'erminos $V_{ext}$, $V_{H}$ y $V_{xc}$ bajo el 
+t\'ermino $V_{ef}$ que se conoce como potencial efectivo tenemos
+
+\begin{equation}
+    \left[ -\frac{1}{2}\nabla_{i}^{2} + V_{ef} - 
+    \varepsilon_{i} \right] \phi_{i}(r) = 0
+\end{equation}
+
+\noindent Obtenemos la ecuaci\'on de Kohn-Sham
+
+\begin{equation}
+    \left[ -\frac{1}{2}\nabla_{i}^{2} + V_{ef} \right] \phi_{i}(r) = 
+    \varepsilon_{i} \phi_{i}(r)
+\end{equation}

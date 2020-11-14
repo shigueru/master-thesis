@@ -1,0 +1,64 @@
+El m\'etodo asume que para un sistema de n-electrones, cada electr\'on no 
+percibe a los otros como entidades independientes, sino como un campo promedio. 
+Es decir que el sistema de n-electrones se convierte en un sistema 
+mono-electr\'onico, donde cada electr\'on se mueve en una densidad promedio 
+formada por el resto de electrones.
+
+Con este modelo simplificado, se puede escribir la ecuaci\'on de onda del 
+siguiente modo
+
+%\begin{equation}
+%\big [ - \sum _{i}^{n}\frac{1}{2} \nabla _{i}^{2} - \sum _{i} ^{N} 
+%\frac{Z_{i}}{|R_{i}-r|} + \sum _{i \ne j} ^{n} \int \frac{|\phi 
+%    _{i}(r^{\prime})|^{2}}{|r-r^{\prime }|}d^{3}r^{\prime} \big] \phi _{j} (r) 
+%    = E_{j} \phi _{j} (r) \textrm{ ,}
+%\end{equation}
+
+\begin{equation}
+\big [ - \frac{1}{2} \nabla _{i}^{2} - \sum _{i} ^{N} 
+\frac{Z_{i}}{|R_{i}-r|} + \sum _{i \ne j} ^{n} \int \frac{|\phi 
+    _{i}(r^{\prime})|^{2}}{|r-r^{\prime }|}d^{3}r^{\prime} \big] \phi _{j} (r) 
+= E_{j} \phi _{j} (r) \textrm{ ,}
+\end{equation}
+
+\noindent donde el primer t\'ermino es la energ\'ia cin\'etica de los 
+electrones. El 
+segundo t\'ermino es el potencial externo $V_{ext}$ es decir la interacci\'on 
+atractiva entre los electrones y los n\'ucleos. El tercer t\'ermino es el 
+potencial de Hartree $V_{H}$ que proviene de la interacci\'on repulsiva de 
+Coulomb entre cada electr\'on y el campo promedio generado por los dem\'as 
+electrones.
+
+
+\noindent Dado que los electrones son independientes, la energ\'ia total del 
+sistema es 
+la suma de las energ\'ias de cada mono-electr\'on.
+
+\begin{equation}
+    E = E_{1} + E_{2} + \dots + E_{n}
+\end{equation}
+
+\noindent Adem\'as, Hartree propuso que la funci\'on de onda del sistema, puede 
+ser 
+aproximada como el producto de las funciones de onda mono-electr\'onicas.
+
+\begin{equation}
+    \Psi = \phi_{1} \times \phi_{2} \times \dots \times \phi_{n}
+\end{equation}
+
+\noindent Tambi\'en debemos notar que la funci\'on de onda mono-electr\'onica 
+que se 
+busca se encuentra dentro del hamiltoniano en  la ecuaci\'on de onda, por lo 
+que Hartree introdujo un m\'etodo para solucionar la ecuaci\'on de onda llamado 
+m\'etodo de campo auto-consistente.
+
+\noindent A pesar de que el modelo de Hartree tuvo \'exito al ser aplicado al 
+hidr\'ogeno, no pudo hacer predicciones precisas para otros sistemas. Debido a 
+las siguientes razones.
+
+\begin{itemize}
+    \item No sigue los dos principios b\'asicos de la mec\'anica cu\'antica: El 
+    principio de antisimetr\'ia y el principio de exclusi\'on de Pauli.
+    \item No toma en cuenta las energ\'ias de intercambio y correlaci\'on que 
+    provienen de la naturaleza de los electrones.
+\end{itemize}

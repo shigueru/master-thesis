@@ -1,0 +1,20 @@
+\section{grafica.sh}
+
+Este script permite automatizar la preparaci\'on de los archivos con los datos de densidad de estados total y parcial de cada orbital para cada uno de los elementos. Se muestra como ejemplo el script correspondiente al $YCrO_{3}$.
+
+\begin{lstlisting}
+# ============ Y ================================
+python suma_pdos.py -o YCrO3.scf.out -p Y_DOS -s "*(Y)*"             # total
+python suma_pdos.py -o YCrO3.scf.out -p Y_DOS_s -s "*(Y)*(s)"        # orbital s
+python suma_pdos.py -o YCrO3.scf.out -p Y_DOS_p -s "*(Y)*(p)"        # orbital p
+python suma_pdos.py -o YCrO3.scf.out -p Y_DOS_d -s "*(Y)*(d)"        # orbital d
+# ============ O ================================
+python suma_pdos.py -o YCrO3.scf.out -p O_DOS -s "*(O)*"             # total
+python suma_pdos.py -o YCrO3.scf.out -p O_DOS_s -s "*(O)*(s)"        # orbital s
+python suma_pdos.py -o YCrO3.scf.out -p O_DOS_p -s "*(O)*(p)"        # orbital p
+# ============ Cr ================================
+python suma_pdos.py -o YCrO3.scf.out -p Cr_DOS -s "*(Cr*"            # total
+python suma_pdos.py -o YCrO3.scf.out -p Cr_DOS_s -s "*(Cr*(s)"       # orbital s
+python suma_pdos.py -o YCrO3.scf.out -p Cr_DOS_p -s "*(Cr*(p)"       # orbital p
+python suma_pdos.py -o YCrO3.scf.out -p Cr_DOS_d -s "*(Cr*(d)"       # orbital d
+\end{lstlisting}

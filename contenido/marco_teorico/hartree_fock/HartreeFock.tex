@@ -1,0 +1,49 @@
+En el m\'etodo de Hartree-Fock la funci\'on de onda es aproximada como una 
+combinaci\'on lineal de funciones de onda mono-electr\'onicas, en la forma de 
+un determinante de Slater
+
+\begin{equation}
+\psi (r_{1}r_{2}\cdots r_{N}) = \frac{1}{\sqrt{N!}} 
+\left ( 
+\begin{array}{cccc}
+\phi _{1}(r_{1}) & \phi _{2}(r_{1}) & \cdots & \phi _{N}(r_{1}) \\
+\phi _{1}(r_{2}) & \phi _{2}(r_{2}) & \cdots & \phi _{N}(r_{2}) \\
+\vdots & \vdots & \ddots & \vdots \\
+\phi _{1}(r_{N}) & \phi _{2}(r_{N}) & \cdots & \phi _{N}(r_{N})
+\end{array} 
+\right ) \textrm{ ,}
+\end{equation}
+
+\noindent donde $\frac{1}{\sqrt{N!}}$ es el factor de normalizaci\'on para un 
+sistema de 
+N electrones.
+
+\noindent Usando el determinante de Slater, podemos escribir la ecuaci\'on de 
+onda del 
+siguiente modo
+
+%\begin{equation}
+%\big [ - \sum _{i}^{n} \frac{1}{2} \nabla _{i}^{2} - \sum _{i} ^{N} 
+%\frac{Z_{i}}{|R_{i}-r|} + \sum _{i \ne j} ^{n} \int \frac{|\phi 
+%    _{i}(r^{\prime})|^{2}}{|r-r^{\prime }|}d^{3}r^{\prime} \big] \phi _{j} (r) 
+%    - 
+%\sum _{i} \int dr^{\prime} \frac{\phi _{i}^{*}(r^{\prime}) \phi 
+%    _{j}(r^{\prime})}{|r^{\prime}-r|} \phi_{i}(r) = E_{j} \phi _{j}(r) 
+%%%\textrm{ 
+%    ,}
+%\end{equation}
+
+\begin{equation}
+\big [ - \sum _{i}^{n} \frac{1}{2} \nabla _{i}^{2} - \sum _{i} ^{N} 
+\frac{Z_{i}}{|R_{i}-r|} + \sum _{i \ne j} ^{n} \int \frac{|\phi 
+    _{i}(r^{\prime})|^{2}}{|r-r^{\prime }|}d^{3}r^{\prime} \big] \phi _{j} (r) 
+- 
+\sum _{i} \int dr^{\prime} \frac{\phi _{i}^{*}(r^{\prime}) \phi 
+    _{j}(r^{\prime})}{|r^{\prime}-r|} \phi_{i}(r) = E_{j} \phi _{j}(r) \textrm{ 
+    ,}
+\end{equation}
+
+\noindent donde el \'ultimo t\'ermino del lado izquierdo corresponde al 
+intercambio, el 
+cual es un tipo de interacci\'on cu\'antica y no existe un an\'alogo cl\'asico 
+de este t\'ermino.

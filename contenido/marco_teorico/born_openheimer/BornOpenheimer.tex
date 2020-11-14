@@ -1,0 +1,55 @@
+Una descripci\'on precisa de las propiedades f\'isicas y qu\'imicas de los 
+materiales requiere del tratamiento mec\'anico-cu\'antico de un sistema de 
+muchas part\'iculas, formado por electrones y n\'ucleos. Adem\'as se debe 
+solucionar la ecuaci\'on de Schrodinger con el hamiltoniano mostrado en ( 
+\ref{schrodinger}) para una funci\'on de onda con una cantidad de 
+variables espaciales $\{R,r\}$ equivalente a tres veces el n\'umero total de 
+part\'iculas del sistema.
+
+\begin{equation} \label{schrodinger}
+-\sum _{I=1}^{N} \frac{1}{2} \nabla _{I}^{2} - \sum 
+_{i=1}^{n} \frac{1}{2} \nabla _{i}^{2} + \frac{1}{2} \sum _{I \ne 
+J}^{N} \frac{Z_{I}Z_{J}}{|R_{I}-R_{J}|} + \frac{1}{2} \sum _{i\ne j}^{n} 
+\frac{1}{|r_{i}-r_{j}|} - \sum _{I}^{N} \sum _{j}^{n} 
+\frac{Z_{I}}{|R_{I}-r_{j}|}
+\end{equation}
+
+Donde:
+
+\begin{itemize}
+    \item $\displaystyle -\sum _{I=1}^{N} \frac{1}{2} \nabla _{I}^{2}$ : 
+    Energ\'ia cin\'etica de los n\'ucleos.
+    \item $\displaystyle - \sum _{i=1}^{n} \frac{1}{2} \nabla _{i}^{2}$ : 
+    Energ\'ia cin\'etica de los electrones.
+    \item $\displaystyle \frac{1}{2} \sum _{I \ne J}^{N} 
+    \frac{Z_{I}Z_{J}}{|R_{I}-R_{J}|}$ : 
+    Interacci\'on n\'ucleo-n\'ucleo.
+    \item $\displaystyle \frac{1}{2} \sum _{i\ne j}^{n} 
+    \frac{1}{|r_{i}-r_{j}|}$ : 
+    interacci\'on electr\'on-electr\'on.
+    \item $\displaystyle \sum _{I}^{N} \sum _{j}^{n} 
+    \frac{Z_{I}}{|R_{I}-r_{j}|}$ : 
+    Interacci\'on n\'ucleo-electr\'on.
+\end{itemize}
+
+\noindent El gran n\'umero de variables contenidas en el hamiltoniano 
+(\ref{schrodinger}) 
+hace dif\'icil solucionar la ecuaci\'on de Schrodinger para obtener 
+informaci\'on del sistema. Entonces se debe usar una aproximaci\'on.
+
+\noindent La aproximaci\'on de Born-Oppenheimer considera la diferencia de 
+masas entre 
+los n\'ucleos y los electrones, la cual es grande, por lo que se puede 
+considerar que los electrones responden de manera inmediata al movimiento de 
+los n\'ucleos. Basado en lo anterior, los n\'ucleos pueden ser tratados como 
+part\'iculas fijas en el espacio, que son fuente de un potencial externo en el 
+cual los electrones se mueven. De esta manera podemos expresar el hamiltoniano 
+de Born-Oppenheimer utilizando unidades at\'omicas como
+
+\begin{equation}
+H_{BO} =-\sum _{i=1}^{N} \frac{1}{2} \nabla _{i}^{2} + \frac{1}{2} \sum _{I \ne 
+    J}^{N} \frac{Z_{I}Z_{J}}{|R_{I}-R_{J}|} + \frac{1}{2} \sum _{i\ne j}^{n} 
+\frac{1}{|r_{i}-r_{j}|} - \sum _{I}^{N} \sum _{j}^{n} 
+\frac{Z_{I}}{|R_{I}-r_{j}|}
+\label{born-oppenheimer}
+\end{equation}

@@ -1,0 +1,62 @@
+En la aproximaci\'on de densidad local la energ\'ia de 
+intercambio-correlaci\'on del 
+sistema estudiado que posee una densidad electr\'onica no homog\'enea, es 
+aproximada calculando la energ\'ia de intercambio-correlaci\'on de un sistema 
+con densidad electr\'onica homog\'enea (gas de electrones homogeneo). Usando 
+esta simplificaci\'on se puede expresar esta energ\'ia del siguiente modo.
+
+\begin{equation}
+E_{xc}^{LDA} [\rho ] = \int d^{3}r \rho (r) \varepsilon _{xc}^{unif} [\rho 
+(r)] \textrm{ ,}
+\end{equation}
+
+\noindent donde el termino $\varepsilon _{xc}^{unif} [\rho (r)]$ es la 
+energ\'ia de 
+intercambio-correlaci\'on por electr\'on. Esta aproximaci\'on es valida para 
+una densidad electr\'onica uniforme y para una densidad electr\'onica que varia 
+lentamente cumpliendo la condici\'on \ref{variacion_lenta_densidad}.
+
+\begin{equation} \label{variacion_lenta_densidad}
+\frac{|\bigtriangledown \rho |}{\rho } \ll (3 \pi ^{2} \rho)^{1/3}
+\end{equation}
+
+\noindent La energ\'ia de intercambio-correlaci\'on por electr\'on $\varepsilon 
+_{xc}^{unif} [\rho (r)]$ puede ser separada en un termino de intercambio y en 
+un termino de correlaci\'on
+
+\begin{equation}
+   \varepsilon _{xc}^{unif} (\rho ) = \varepsilon _{x}^{unif} (\rho ) + 
+   \varepsilon _{c}^{unif} (\rho )
+\end{equation}
+
+\noindent El termino de intercambio es conocido, ya que se puede expresar en 
+forma 
+anal\'itica para un gas de electrones homog\'eneo. 
+
+\begin{equation}
+   \varepsilon _{x}^{unif} (\rho ) = -\frac{3}{4} \left( \frac{3}{\pi } \right) 
+   ^{1/3} \rho ^{1/3}
+\end{equation}
+
+\noindent El termino de correlaci\'on no puede ser expresado en forma 
+anal\'itica, por lo 
+que se utiliza el m\'etodo de montecarlo cu\'antico para varias densidades 
+$\rho $ cuyos resultados son ajustado a una funci\'on parametrizada de $\rho $ 
+que debe cumplir con dos condiciones expresadas en \ref{alta_baja_densidad}
+
+\begin{equation} \label{alta_baja_densidad}
+    \varepsilon _{c}^{unif} (\rho ) = \left\{ \begin{array}{ll}
+    A \ln r_{s} B + C r_{s} \ln r_{s} & \textrm{; } r_{s} \to 0 \\ 
+    \frac{D}{r_{s}} + \frac{E}{r_{s}^{3/2}} & \textrm{; } r_{s} \to \infty
+    \end{array} \right. \textrm{ ,}
+\end{equation}
+
+\noindent donde \textbf{A,B,C,D,E} son constantes y $r_{s}$ es el radio de 
+Wigner-Seitz, 
+que es el radio m\'inimo que define un volumen donde se halla un solo 
+electr\'on, y se encuentra relacionado con la densidad electr\'onica como se 
+muestra en \ref{radio_wigner_seitz}
+
+\begin{equation} \label{radio_wigner_seitz}
+    r_{s} = \left( \frac{3}{4 \pi \rho } \right) ^{1/3}
+\end{equation}

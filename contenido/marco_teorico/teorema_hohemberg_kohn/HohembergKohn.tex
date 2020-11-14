@@ -1,0 +1,148 @@
+Hohenberg y Kohn  en 1964 finalmente probaron que la densidad electr\'onica 
+tiene un papel fundamental en los c\'alculos de estructura electr\'onica. 
+Enunciaron dos teoremas que completaron la relaci\'on entre la densidad 
+electr\'onica, energ\'ia externa, hamiltoniano y funci\'on de onda.
+
+%             =
+%            = =
+%           =   =
+%          =     =
+%         =       = 
+% ========         ==========
+%        TEOREMA UNO
+% ========         ===========
+%         =       =
+%          =     =
+%           =   =
+%            = =
+%             =
+
+\begin{hk}
+    El potencial $V_{ext}(r)$ est\'a determinado \'unicamente, excepto por una 
+    constante, por la densidad del estado fundamental $\rho _{0}(r)$.
+\end{hk}
+
+\noindent Para poder comprobarlo, se asume que existen dos potenciales externos 
+$V_{ext}^{(1)}(r)$ y $V_{ext}^{(2)}(r)$ diferentes que generan la misma 
+densidad en el estado fundamental $\rho _{0}(r)$. 
+Adem\'as los dos potenciales definen dos hamiltonianos $H^{(1)}$ y $H^{(2)}$ 
+para los cuales se definen dos funciones de onda diferentes en el estado 
+fundamental $\Psi ^{(1)}$ y $\Psi ^{(2)}$ respectivamente.
+
+\noindent Luego, como $\Psi ^{(2)}$ no pertenece al estado fundamental de 
+$H^{(1)}$, 
+tenemos lo siguiente
+\begin{equation} \label{comparacion_uno_dos}
+\bra{\Psi ^{(1)}} H^{(1)} \ket{\Psi ^{(1)}} < \bra{\Psi ^{(2)}} H^{(1)} 
+\ket{\Psi ^{(2)}} \textrm{ ,}
+\end{equation}
+\noindent donde
+\begin{equation}
+\bra{\Psi ^{(1)}} H^{(1)} \ket{\Psi ^{(1)}} = E^{(1)}
+\end{equation}
+y
+\begin{equation}
+\begin{split}
+\bra{\Psi ^{(2)}} H^{(1)} \ket{\Psi ^{(2)}} &= \bra{\Psi ^{(2)}} H^{(2)} 
+\ket{\Psi ^{(2)}} + \bra{\Psi ^{(2)}} H^{(1)} - H^{(2)} \ket{\Psi ^{(2)}} \\
+&= E^{(2)} + \int d^{3}r [ V_{ext}^{(1)}(r) - V_{ext}^{(2)}(r) ] \rho 
+_{0}(r)
+\end{split} \textrm{ ,}
+\end{equation}
+\noindent entonces de \ref{comparacion_uno_dos}
+\begin{equation}
+E^{(1)} < E^{(2)} + \int d^{3}r [ V_{ext}^{(1)}(r) - V_{ext}^{(2)}(r) ] 
+\rho _{0}(r) \label{ec1}
+\end{equation}
+\noindent De igual forma como $\Psi ^{(1)}$ no pertenece al estado fundamental 
+de 
+$H^{(2)}$, tenemos
+\[
+\bra{\Psi ^{(2)}} H^{(2)} \ket{\Psi ^{(2)}} < \bra{\Psi ^{(1)}} H^{(2)} 
+\ket{\Psi ^{(1)}}
+\]
+\noindent Entonces
+\begin{equation}
+E^{(2)} < E^{(1)} - \int d^{3}r [ V_{ext}^{(1)}(r) - V_{ext}^{(2)}(r) ] 
+\rho _{0}(r) \label{ec2}
+\end{equation} 
+\noindent Sumando las expresiones \ref{ec1} y \ref{ec2}, obtenemos
+\begin{equation}
+E^{(1)} + E^{(2)} < E^{(2)} + E^{(1)}
+\end{equation}
+\noindent Lo cual es una contradicci\'on, por lo que concluimos que no es 
+posible que 
+existan dos potenciales externos diferentes que 
+se relacionen con una misma densidad en el estado fundamental.
+
+%             =
+%            = =
+%           =   =
+%          =     =
+%         =       = 
+% ========         ==========
+%        TEOREMA DOS
+% ========         ===========
+%         =       =
+%          =     =
+%           =   =
+%            = =
+%             =
+
+\begin{hk}
+    La densidad que minimiza la energ\'ia total es exactamente la densidad del 
+    estado fundamental.
+\end{hk}
+
+\noindent Para Hohenberg-khon la energ\'ia se puede expresar como:
+
+\begin{equation}
+\begin{split}
+E_{HK}[\rho] &= T[\rho] + E_{int}[\rho] + \int d^{3}rV_{ext}(r)\rho (r) + 
+E_{II} \\
+&= F_{HK}[\rho] + \int d^{3}r V_{ext}(r)\rho (r) + E_{II} \textrm{ ,}
+\end{split}
+\end{equation}
+
+\noindent donde:
+\[
+\begin{split}
+T[\rho] & \text{  : es el funcional de energ\'ia cin\'etica} \\
+E_{II}  & \text{  : es el funcional de energ\'ia de interacci\'on entre 
+    n\'ucleos} \\
+E_{int}[\rho] & \text{  : es la energ\'ia potencial del sistema de 
+    electrones que interactuan}
+\end{split}
+\]
+\noindent Adem\'as
+\begin{equation}
+F_{HK}[\rho] = T[\rho] + E_{int}[\rho] \label{F_HK}
+\end{equation}
+\noindent Es importante notar que $F_{HK}[\rho]$ es una funcional universal, es 
+decir 
+que es la misma para todos los sistemas electr\'onicos, siendo independiente
+del potencial externo, ya que la energ\'ia cin\'etica y la energ\'ia de
+interacci\'on $E_{int}[\rho]$ solo dependen de la densidad.
+
+
+\noindent Considerando un sistema con una densidad electr\'onica en el estado 
+fundamental
+$\rho_{0}^{(1)}$ que corresponde a un potencial externo $V_{ext}^{(1)}(r)$,
+la energ\'ia del estado fundamental es:
+
+\begin{equation}
+E^{(1)} = E_{HK}[\rho _{0}^{(1)}] = \bra{\Psi ^{(1)}} H^{(1)} \ket{\Psi 
+    ^{(1)}}
+\end{equation}
+\noindent Considerando $\rho ^{(2)}$ con su funci\'on de onda correspondiente
+$\Psi ^{(2)}$,
+
+\begin{equation}
+E^{(1)} = \bra{\Psi ^{(1)}} H^{(1)} \ket{\Psi ^{(1)}} < \bra{\Psi ^{(2)}} 
+H^{(1)} \ket{\Psi ^{(2)}}
+\end{equation}
+
+\noindent Por lo tanto la energ\'ia para la densidad electr\'onica del estado 
+fundamental 
+$\rho_{0}(r)$ es menor que la energ\'ia para otra densidad electr\'onica 
+$\rho (r)$.

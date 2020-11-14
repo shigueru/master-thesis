@@ -1,0 +1,142 @@
+En la secci\'on anterior se asumi\'o que la energ\'ia de 
+intercambio-correlaci\'on  
+pod\'ia expresarse como un funcional de la densidad electr\'onica. La energ\'ia 
+de intercambio-correlaci\'on representa un aproximado del diez por ciento de la 
+energ\'ia total, pero es fundamental para calcular propiedades de los 
+materiales,tales como: enlaces, polarizaci\'on del spin y el gap de las bandas 
+de energ\'ia; entre otras. 
+
+\noindent La energ\'ia de intercambio-correlaci\'on recoge todas las 
+interacciones de un 
+electr\'on con los dem\'as, que se encuentran en el sistema real de electrones 
+interactuantes, por lo que se debe aproximar esta energ\'ia lo mejor 
+posible.
+
+%             =
+%            = =
+%           =   =
+%          =     =
+%         =       = 
+% ========         ==========
+%    HUECO DE INTERCAMBIO
+% ========         ===========
+%         =       =
+%          =     =
+%           =   =
+%            = =
+%             =
+
+\subsection{Hueco de intercambio}
+
+Este concepto surge de la propiedad de antisimetr\'ia de los orbitales, la cual 
+indica que dos electrones con el mismo espin no pueden ocupar el mismo orbital. 
+Esta restricci\'on genera una separaci\'on espacial entre los electrones 
+provocando una menor repulsi\'on entre ellos a la vez que causa una reducci\'on 
+en la densidad electr\'onica. A esta densidad electr\'onica reducida se le 
+denomina hueco de intercambio, se puede ver una representaci\'on de este en la 
+figura \ref{HuecoIntercambio}. La energ\'ia de intercambio representa la 
+interacci\'on entre un hueco de intercambio y la densidad electr\'onica a lo 
+largo de cierta distancia.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{contenido/marco_teorico/funcional_exchange_correlation/img_exchange_correlation/HuecoIntercambio.png}
+    \caption[Hueco de intercambio]{Representaci\'on del hueco de intercambio 
+    entre dos electrones.}
+    \label{HuecoIntercambio}
+\end{figure}
+
+%             =
+%            = =
+%           =   =
+%          =     =
+%         =       = 
+% ========         ==========
+%    HUECO DE CORRELACION
+% ========         ===========
+%         =       =
+%          =     =
+%           =   =
+%            = =
+%             =
+
+\subsection{Hueco de correlaci\'on}
+
+Se sabe que dos electrones con diferente espin pueden ocupar el mismo orbital, 
+pero se repelen entre si debido a que poseen la misma carga. Esto se puede 
+entender como una correlaci\'on electr\'onica que reduce la densidad 
+electr\'onica alrededor del electr\'on, generando una energ\'ia de atracci\'on 
+peque\~na. 
+Este efecto se conoce como hueco de correlaci\'on. Se puede ver una 
+representaci\'on de este efecto en la figura \ref{HuecoCorrelacion}. El hueco 
+de correlaci\'on tiene direcciones negativas y positivas porque proviene de la 
+interacci\'on de dos electrones con espines opuestos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{contenido/marco_teorico/funcional_exchange_correlation/img_exchange_correlation/HuecoCorrelacion.png}
+    \caption[Hueco de correlaci\'on]{Representaci\'on del hueco de 
+    correlaci\'on entre dos electrones.}
+    \label{HuecoCorrelacion}
+\end{figure}
+
+%             =
+%            = =
+%           =   =
+%          =     =
+%         =       = 
+% ========         ==========
+% HUECO DE INTERCAMBIO-CORRELACION
+% ========         ===========
+%         =       =
+%          =     =
+%           =   =
+%            = =
+%             =
+
+\subsection{Hueco de intercambio-correlaci\'on}
+
+El hueco de inetrcambio-correlaci\'on surge de la uni\'on de los huecos de 
+intercambio y correlaci\'on. En presencia de densidades altas de electrones, se 
+puede considerar que la parte de intercambio contribuye m\'as, ya que esta 
+parte proviene del principio de exclusi\'on de Pauli que predomina cuando los 
+electrones est\'an m\'as cerca entre si. En cambio, con densidades bajas de 
+electrones, la parte de la correlaci\'on llega a ser comparable a la parte de 
+intercambio.
+
+
+\noindent Se considera que la energ\'ia de intercambio-correlaci\'on es una 
+funcional de 
+la densidad electr\'onica de car\'acter local o semilocal, luego la energ\'ia 
+de intercambio-correlaci\'on por electr\'on podemos definirla como la energ\'ia 
+de interacci\'on electrost\'atica entre un electr\'on en $r$ con la densidad  
+del hueco de intercambio-correlaci\'on en $r^{\prime }$.
+
+\begin{equation}
+    \varepsilon _{xc} [\rho (r)] = \frac{1}{2} \int \frac{\rho 
+    ^{hueco}_{xc}(r,r^{\prime })}{|r - r^{\prime }|} dr^{\prime }
+\end{equation}
+
+\noindent Entonces la energ\'ia de intercambio-correlaci\'on total es la 
+integral sobre todo el espacio del producto de la densidad electr\'onica con la 
+energ\'ia de intercambio-correlaci\'on por electr\'on.
+
+\begin{equation}
+    E_{xc} [\rho (r)] = \int \rho (r) \varepsilon_{xc} dr
+\end{equation}
+
+Reemplazando $\varepsilon_{xc}$ obtenemos
+
+\begin{equation}
+    E_{xc} [\rho (r)] = \frac{1}{2} \int \int \frac{\rho (r) \rho 
+        ^{hueco}_{xc}(r,r^{\prime })}{|r - r^{\prime }|} dr dr^{\prime }
+\end{equation}
+
+\noindent Al considerar que la energ\'ia de intercambio-correlaci\'on es de 
+car\'acter local o semilocal durante el proceso de aproximaci\'on, se facilitan 
+muchos los c\'alculos. A lo largo del tiempo se han propuesto muchos tipos de 
+aproximaciones para la energ\'ia de intercambio-correlaci\'on, de los cuales se 
+pueden separar dos que son los m\'as usados en distintos tipos de aplicaciones, 
+los cuales son: Aproximaci\'on de densidad local (LDA) y aproximaci\'on de 
+gradiente generalizado (GGA). En la siguiente secci\'on se detalla la 
+aproximaci\'on LDA.

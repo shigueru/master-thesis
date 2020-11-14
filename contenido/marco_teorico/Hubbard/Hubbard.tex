@@ -1,0 +1,66 @@
+La aproximaci\'on de densidad local falla por si misma al describir sistemas 
+que poseen electrones fuertemente correlacionados. En estos sistemas, por 
+ejemplo materiales que posean \'atomos de metales de transici\'on o tierras 
+raras, los electrones de los orbitales \textbf{d} y \textbf{f} se encuentran 
+fuertemente localizados, y su comportamiento se desv\'ia del descrito por el 
+modelo de gas de electrones homog\'eneo. Estos electrones localizados perciben 
+una fuerte interacci\'on de coulomb que no es descrita por la aproximaci\'on de 
+densidad local. Por lo que con el fin de considerar esta fuerte interacci\'on 
+de 
+coulomb,es necesaria una modificaci\'on del funcional.
+
+\noindent La aproximaci\'on de densidad local corregida para tratar con los 
+electrones 
+fuertemente correlacionados es llamada LDA+U. La idea detr\'as de LDA+U es 
+incluir en el funcional un termino que tome en cuenta las interacciones 
+electron-electron fuertes en los orbitales localizados. La energ\'ia del 
+sistema con esta correcci\'on seria la siguiente.
+
+\begin{equation}\label{hubbard_correcion}
+E^{LDA+U} [\rho (r)]= E^{LDA} [\rho (r)] + 
+E^{Hubbard}[n_{mm^{\prime}}^{I\sigma}] - E^{dc}[n^{I\sigma}] \textrm{ ,}
+\end{equation}
+
+\noindent donde $n_{mm^{\prime}}^{I\sigma}$ es la matriz de ocupaci\'on de los 
+orbitales 
+at\'omicos de los \'atomos con electrones fuertemente correlacionados en el 
+sitio I con espin $\sigma$.
+
+\begin{equation}
+n_{mm^{\prime}}^{I\sigma} = \sum _{k,n} f_{k,n} \braket{\psi _{k,n}^{\sigma } | 
+\phi _{m}^{I}} \braket{\phi _{m^{\prime}}^{I} | \psi _{k,n}^{\sigma }} \textrm{ 
+,}
+\end{equation}
+
+\noindent Donde $f_{k,n}$ es la ocupaci\'on de los estados electr\'onicos con 
+vector de 
+onda \textbf{k} e \'indice de banda n. El $\phi _{m}^{I}$ es el m-\'esimo 
+orbital 
+at\'omico en el sitio I, y $\psi _{k,n}^{\sigma }$ es la funci\'on  de onda 
+electr\'onica correspondiente al estado (k,n) con espin $\sigma $.
+
+
+
+\noindent El primer t\'ermino de la ecuaci\'on \ref{hubbard_correcion} es el 
+funcional de 
+energ\'ia en la aproximaci\'on de densidad local. El segundo t\'ermino de la 
+ecuaci\'on \ref{hubbard_correcion} $E^{Hubbard}[n_{mm^{\prime}}^{I\sigma}]$ es 
+el t\'ermino que cuantifica la correlaci\'on de los estados ocupados de los 
+orbitales. El tercer t\'ermino de la ecuaci\'on \ref{hubbard_correcion} 
+$E^{dc}[n^{I\sigma}]$ es la energ\'ia de correlaci\'on, la cual es restada de 
+la energ\'ia total para evitar un doble conteo. Y $n^{I\sigma} = \sum _{m} 
+n_{mm}^{I\sigma}$ es la traza de la matriz de ocupaciones de los orbitales 
+at\'omicos con electrones fuertemente correlacionados. Se puede reescribir la 
+ecuaci\'on \ref{hubbard_correcion} como
+
+\begin{equation}\label{hubb_rescrito}
+E^{LDA+U} [\rho (r)]= E^{LDA} [\rho (r)] + \sum _{I} \left[ \frac{U}{2} \sum 
+_{m,\sigma \neq m^{\prime},\sigma ^{\prime}} n_{m}^{I\sigma} 
+n_{m^{\prime}}^{I\sigma ^{\prime}} - \frac{U}{2} n^{I}(n^{I}-1) \right] 
+\textrm{ ,}
+\end{equation}
+
+\noindent donde $n_{m}^{I\sigma} = n_{mm^{\prime}}^{I\sigma}$ y $n^{I} = \sum 
+_{m,\sigma 
+} n_{m}^{I\sigma }$. \textbf{U} es el par\'ametro de Hubbard que toma en 
+cuenta las correlaciones entre los electrones fuertemente localizados.
